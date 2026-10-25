@@ -1,0 +1,39 @@
+<section id="techstack" data-transition="push" style="background:#0C1B33;color:#F7F8F5;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:18px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#FF6B35">Technology · tech stack</p>
+<h2 style="font-size:64px;font-weight:600;line-height:1.15;width:1540px">Five layers. The expensive part is deterministic.</h2>
+</div>
+<div style="display:flex;gap:20px;align-items:stretch">
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-top:5px solid #0FA3B1;border-radius:14px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;font-weight:700;color:#0FA3B1">INTERFACE</p>
+<p style="font-size:25px;line-height:1.45;color:#D9E1F0">React merchant chat, ops console and the live liability ledger over SSE. n8n for WhatsApp and SMS. Sarvam for Hindi speech.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-top:5px solid #0FA3B1;border-radius:14px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;font-weight:700;color:#0FA3B1">AGENT CORE</p>
+<p style="font-size:25px;line-height:1.45;color:#D9E1F0">Python and FastAPI. A tool-calling loop that plans and writes, with a cost router choosing the tier per case.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-top:5px solid #FF6B35;border-radius:14px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;font-weight:700;color:#FF6B35">CLOCK + INCIDENT</p>
+<p style="font-size:25px;line-height:1.45;color:#D9E1F0">Deadline computation, breach prediction and compensation maths. Clustering on bank × error code × 15-minute window.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-top:5px solid #FF6B35;border-radius:14px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;font-weight:700;color:#FF6B35">POLICY GATE</p>
+<p style="font-size:25px;line-height:1.45;color:#D9E1F0">A YAML rule file encoding RBI TAT, UDIR, the settlement cycle and IOS. Evaluated deterministically. No model in this path.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-top:5px solid #0FA3B1;border-radius:14px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;font-weight:700;color:#0FA3B1">DATA + TOOLS</p>
+<p style="font-size:25px;line-height:1.45;color:#D9E1F0">SQLite for the prototype. Mocked Paytm APIs mirroring real signatures, so swapping them in is integration, not a rewrite. Append-only audit log.</p>
+</div>
+</div>
+<div style="display:flex;gap:28px;align-items:stretch">
+<div style="flex:3;display:flex;flex-direction:column;gap:12px;background:#16294A;padding:32px;border-radius:14px">
+<h3 style="font-size:30px;font-weight:600;color:#FF6B35">The cost router — four tiers, cheapest first</h3>
+<p style="font-size:25px;line-height:1.5;color:#D9E1F0"><b>Known incident</b> → filled template, zero model calls · <b>Simple case</b> → Claude Haiku 5.5 · <b>Hard or risky</b> → Claude Opus 5.5 · <b>Above caps or fraud-flagged</b> → human, with the deadline on the card. Providers are swappable behind one interface.</p>
+</div>
+<div style="flex:2;display:flex;flex-direction:column;gap:12px;background:#FF6B35;padding:32px;border-radius:14px">
+<h3 style="font-size:30px;font-weight:600;color:#0C1B33">Mocked, deliberately</h3>
+<p style="font-size:25px;line-height:1.5;color:#331002">Paytm-side systems are mocked so our week goes into the clock engine, the batching and the eval — the parts that are actually novel.</p>
+</div>
+</div>
+<aside>Keep this slide short out loud. The one line that matters: the policy gate has no model in it. Everything that moves money is deterministic code reading a rule file, and the model only plans and writes prose. That is both the safety story and the cost story. Second point: the mocked tools mirror the real API signatures, so a judge asking "how does this reach production" gets "it is an integration task, not a rewrite."</aside>
+</section>

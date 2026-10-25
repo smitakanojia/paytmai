@@ -3,11 +3,14 @@
   "createdOnFiles": { "v": 1, "at": "2026-10-25T00:00:00Z" },
   "lists": "css",
   "title": "T+0 — Paytm AI Hackathon Track 3",
-  "order": ["cover", "hook", "problem", "clocks", "engine", "credit", "autonomy", "scale", "safety", "paytm", "proof", "close"],
+  "order": ["cover", "hook", "problem", "clocks", "engine", "scale", "safety", "techstack", "credit", "autonomy", "paytm", "impact", "proof", "business", "close"],
   "sections": {
-    "s1": { "description": "Every stuck rupee starts a regulatory timer that nobody is watching.", "start": "hook" },
-    "s2": { "description": "T+0: an agent accountable to the clock, whose output is a credit, not a sentence.", "start": "engine" },
-    "s3": { "description": "Why Paytm, why now, and how we prove it.", "start": "paytm" }
+    "s1": { "description": "Problem statement: every stuck rupee starts a regulatory timer that nobody is watching.", "start": "hook" },
+    "s2": { "description": "Proposed solution: an agent that attaches a clock to every stuck rupee and drives it to zero.", "start": "engine" },
+    "s3": { "description": "Technology and tech stack: five layers, with everything that moves money kept deterministic.", "start": "techstack" },
+    "s4": { "description": "USP: every other agent ends in a sentence, ours ends in a credit.", "start": "credit" },
+    "s5": { "description": "Impact and benefits, and the ablation we measure them against.", "start": "impact" },
+    "s6": { "description": "Business model: a closed clock is the first honestly billable unit in support.", "start": "business" }
   },
   "faces": {
     "ibm-plex-sans": {
