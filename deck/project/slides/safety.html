@@ -1,0 +1,28 @@
+<section id="safety" data-transition="fade" style="background:#ECEEE8;color:#0C1B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C2410C">Safety</p>
+<h2 style="font-size:68px;font-weight:600;line-height:1.15;width:1540px">An agent that moves money must be unable to invent a rule.</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:stretch">
+<div style="width:560px;display:flex;flex-direction:column;gap:16px;background:#0C1B33;padding:44px;border-radius:18px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:26px;font-weight:700;color:#FF6B35">Moffatt v. Air Canada, 2024 BCCRT 149</p>
+<p style="font-size:30px;line-height:1.45;color:#F7F8F5">The airline argued its chatbot was a separate legal entity responsible for its own words. The tribunal rejected that outright and held Air Canada responsible for everything on its site — static page or chatbot alike.</p>
+<p style="font-size:26px;line-height:1.45;color:#B8C4D9">The bot had invented a refund policy. That is the failure mode we designed against.</p>
+</div>
+<div style="flex:1;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#F7F8F5;padding:34px;border:1px solid #D4D8CE;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Policy is codified regulation, not generated text</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">The rule file is a machine-readable encoding of published RBI and NPCI circulars. The model plans and writes; it has no authority to state a policy that is not in the file.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#F7F8F5;padding:34px;border:1px solid #D4D8CE;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">Every rupee traces to a tool call</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Each amount, timestamp and deadline in a reply carries the tool result and the clause it came from, in an append-only log.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#F7F8F5;padding:34px;border:1px solid #D4D8CE;border-radius:16px">
+<h3 style="font-size:32px;font-weight:600">We report a measured error rate, not a claim of zero</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">Caps, fraud flags and human approval above ₹5,000 — plus a false-action rate with its confidence interval, measured on an adversarial set built to induce a wrongful payout.</p>
+</div>
+</div>
+</div>
+<aside>Air Canada is the right case because the failure was not a hallucinated fact, it was an invented policy that the company was then held to. Our architecture makes that structurally impossible rather than unlikely. The third card matters more than it looks: every other team will put a zero on this slide. A measured number with a stated sample size and an adversarial set reads as far more rigorous to anyone who has shipped a model.</aside>
+</section>

@@ -1,0 +1,23 @@
+{
+  "v": 4,
+  "createdOnFiles": { "v": 1, "at": "2026-10-25T00:00:00Z" },
+  "lists": "css",
+  "title": "T+0 — Paytm AI Hackathon Track 3",
+  "order": ["cover", "hook", "problem", "clocks", "engine", "credit", "autonomy", "scale", "safety", "paytm", "proof", "close"],
+  "sections": {
+    "s1": { "description": "Every stuck rupee starts a regulatory timer that nobody is watching.", "start": "hook" },
+    "s2": { "description": "T+0: an agent accountable to the clock, whose output is a credit, not a sentence.", "start": "engine" },
+    "s3": { "description": "Why Paytm, why now, and how we prove it.", "start": "paytm" }
+  },
+  "faces": {
+    "ibm-plex-sans": {
+      "family": "IBM Plex Sans",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    },
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    }
+  },
+  "designSystems": []
+}

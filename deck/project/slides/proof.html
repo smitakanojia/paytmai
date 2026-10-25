@@ -1,0 +1,31 @@
+<section id="proof" data-transition="fade" style="background:#F7F8F5;color:#0C1B33;font-family:'IBM Plex Sans', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:20px">
+<p style="font-family:'JetBrains Mono', Courier New, monospace;font-size:26px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C2410C">How we prove it</p>
+<h2 style="font-size:68px;font-weight:600;line-height:1.15;width:1540px">We benchmark against ourselves with the engines switched off.</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:stretch">
+<div style="width:560px;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;flex-direction:column;gap:10px;background:#0C1B33;padding:36px;border-radius:16px">
+<h3 style="font-size:31px;font-weight:600;color:#FF6B35">An ablation, not a strawman</h3>
+<p style="font-size:26px;line-height:1.45;color:#D9E1F0">The baseline is the identical agent — same prompts, same tools, same model — with the clock engine and incident engine disabled. We say so on the slide, because a baseline you wrote to lose proves nothing.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#ECEEE8;padding:36px;border:1px solid #D4D8CE;border-radius:16px">
+<h3 style="font-size:31px;font-weight:600">The data</h3>
+<p style="font-size:26px;line-height:1.45;color:#4A5568">300+ labelled cases in English, Hinglish and deliberately messy phrasing · an adversarial set built to induce a wrongful payout · one simulated outage of 500–1,000 cases in 20 minutes, including merchants who never complain.</p>
+</div>
+</div>
+<table style="font-family:'IBM Plex Sans', Arial, sans-serif;font-size:26px;color:#0C1B33;padding:16px 20px">
+<tr style="background:#0C1B33"><th style="width:54%;text-align:left;font-weight:600;color:#F7F8F5">Metric</th><th style="width:46%;text-align:left;font-weight:600;color:#F7F8F5">What it proves</th></tr>
+<tr style="background:#FFE4D6"><td style="font-weight:600">₹ liability avoided vs baseline</td><td style="font-weight:600">The headline number</td></tr>
+<tr><td>Clocks stopped before T+1</td><td>The core promise</td></tr>
+<tr style="background:#ECEEE8"><td>Compensation computed correctly</td><td>The agent knows the rules</td></tr>
+<tr><td>Chargebacks pre-empted inside the cycle</td><td>UDIR awareness</td></tr>
+<tr style="background:#ECEEE8"><td>Verified resolution rate — money moved</td><td>Not “the merchant went quiet”</td></tr>
+<tr><td>False-action rate, with its interval</td><td>Measured safety, not a claimed zero</td></tr>
+<tr style="background:#ECEEE8"><td>LLM calls per 1,000 outage cases</td><td>Batching efficiency</td></tr>
+<tr><td>Turns to resolution</td><td>The zero-question opening</td></tr>
+</table>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;font-family:'JetBrains Mono', Courier New, monospace;font-size:24px;color:#6A7179">Every figure on the live dashboard comes from our own eval run on labelled synthetic data. None are assumed.</p>
+<aside>Two things to say out loud. First, the baseline is an ablation of our own agent, which is the only comparison a technical judge will accept. Second, point at the false-action row: we are reporting a measured number with an interval rather than a zero, and we built an adversarial set specifically to find our own failures. That is the slide a Paytm engineer will remember.</aside>
+</section>
